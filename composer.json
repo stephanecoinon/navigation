@@ -1,0 +1,20 @@
+{
+    "name": "stephanecoinon/navigation",
+    "description": "Simple static navigation handler",
+    "authors": [
+        {
+            "name": "Stephane Coinon",
+            "email": "me@stephanecoinon.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "cocur/slugify": "v0.9"
+    },
+    "autoload": {
+        "psr-0": {
+            "Coinon\\Navigation": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
