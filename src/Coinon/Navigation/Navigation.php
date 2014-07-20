@@ -1,6 +1,6 @@
 <?php namespace Coinon\Navigation;
 
-class Navigation {
+class Navigation implements \Countable {
 
     /** @var  array */
     protected $items;
@@ -34,6 +34,16 @@ class Navigation {
             $item->activate();
             $this->activeItem = $item;
         }
+    }
+
+    /**
+     * Returns the number of navigation items
+     *
+     * @var int
+     */
+    public function count($mode = COUNT_NORMAL)
+    {
+        return count($this->items);
     }
 
     public function all()

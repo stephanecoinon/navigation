@@ -2,7 +2,7 @@
 
 use Coinon\Navigation\NavigationItem;
 
-class NavigationItemTest extends PHPUnit_Framework_TestCase {
+class NavigationItemTest extends NavigationTestCase {
 
     /**
      * @test

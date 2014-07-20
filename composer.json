@@ -12,6 +12,9 @@
         "cocur/slugify": "v0.9"
     },
     "autoload": {
+        "files": [
+            "tests/NavigationTestCase.php"
+        ],
         "psr-0": {
             "Coinon\\Navigation": "src/"
         }

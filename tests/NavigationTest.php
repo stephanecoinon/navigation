@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 use Coinon\Navigation\Navigation;
 use Coinon\Navigation\NavigationItem;
 
-class NavigationTest extends PHPUnit_Framework_TestCase {
+class NavigationTest extends NavigationTestCase {
 
     /** @var  NavigationItem */
     protected $item;
@@ -29,7 +29,7 @@ class NavigationTest extends PHPUnit_Framework_TestCase {
     public function it_can_load_a_config()
 	{
         $this->assertEquals($this->item, $this->navigation->findItemBySlug('contact'));
-        $this->assertEquals(3, count($this->navigation->all()));
+        $this->assertCount(3, $this->navigation);
 	}
 
     /**
