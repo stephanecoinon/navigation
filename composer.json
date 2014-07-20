@@ -12,7 +12,7 @@
         "cocur/slugify": "v0.9"
     },
     "autoload": {
-        "files": [
+        "classmap": [
             "tests/NavigationTestCase.php"
         ],
         "psr-0": {
