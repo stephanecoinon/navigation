@@ -12,6 +12,12 @@ class NavigationItem {
     protected $active;
 
     /**
+     * @var string
+     */
+    public $url;
+
+
+    /**
      * @param array  $attributes
      * @throws \InvalidArgumentException if $attributes doesn't contain the required keys
      */
@@ -22,8 +28,9 @@ class NavigationItem {
             $attributes['slug'] = $slugify->slugify($attributes['title']);
         }
         isset($attributes['active']) OR $attributes['active'] = false;
+        isset($attributes['url']) OR $attributes['url'] = $attributes['slug'];
 
-        foreach (['title', 'slug', 'active'] as $attributeName)
+        foreach (['title', 'slug', 'active', 'url'] as $attributeName)
         {
             $this->$attributeName = $attributes[$attributeName];
         }
