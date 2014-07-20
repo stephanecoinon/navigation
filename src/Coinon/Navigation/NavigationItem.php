@@ -4,11 +4,19 @@ use Cocur\Slugify\Slugify;
 
 class NavigationItem {
 
-    /** @var  string */
+    /**
+     * @var string
+     */
 	public $slug;
-    /** @var  string */
+
+    /**
+     * @var string
+     */
 	public $title;
-    /** @var  bool */
+
+    /**
+     * @var bool
+     */
     protected $active;
 
     /**
