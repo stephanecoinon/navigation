@@ -7,11 +7,15 @@ class Navigations implements \Countable {
 
     protected $navigations = [];
 
-    function __construct(array $navigations)
+    /**
+     * @param array  $navigations
+     * @param string $baseUrl
+     */
+    function __construct(array $navigations, $baseUrl = '')
     {
         foreach ($navigations as $navName => $navigation)
         {
-            $this->navigations[$navName] = new Navigation($navigation);
+            $this->navigations[$navName] = new Navigation($navigation, $baseUrl);
         }
     }
 

@@ -10,12 +10,13 @@ class Navigation implements \Countable {
 
     /**
 	 * @param array $navigation
+     * @param string $baseUrl
 	 */
-	function __construct($navigation)
+	function __construct($navigation, $baseUrl='')
 	{
         $this->items = array();
         foreach ($navigation as $item) {
-            $this->items[] = new NavigationItem($item);
+            $this->items[] = new NavigationItem($item, $baseUrl);
         }
 	}
 

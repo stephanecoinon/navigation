@@ -46,4 +46,18 @@ class NavigationItemTest extends NavigationTestCase {
         $this->assertEquals($itemArray['url'], $item->url);
     }
 
+    /**
+     * @test
+     */
+    public function it_prepends_relative_urls_with_the_base_url()
+    {
+        $itemArray = [
+            'title' => 'about',
+            'url'   => 'about-us',
+        ];
+        $item = new NavigationItem($itemArray, 'http://localhost');
+
+        $this->assertEquals('http://localhost/about-us', $item->url);
+    }
+
 }
