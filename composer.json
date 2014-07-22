@@ -1,6 +1,9 @@
 {
     "name": "stephanecoinon/navigation",
     "description": "Simple static navigation handler",
+    "version": "0.1.0",
+    "homepage": "https://github.com/stephanecoinon/navigation",
+    "license": "MIT",
     "authors": [
         {
             "name": "Stephane Coinon",
