@@ -34,7 +34,7 @@ class NavigationHelper {
      */
     public static function isAbsoluteUrl($url)
     {
-        return (preg_match('#^(//|https?://|ftp://)#i', $url) === 1);
+        return (preg_match('#^(//|https?://|ftp://|javascript:)#i', $url) === 1);
     }
 
 }

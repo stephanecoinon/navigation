@@ -17,13 +17,14 @@ class NavigationHelperTest extends NavigationTestCase {
 
     public function testIsAbsoluteUrl()
     {
-        $this->assertTrue(NavigationHelper::isAbsoluteUrl('http://localhost'));
-        $this->assertTrue(NavigationHelper::isAbsoluteUrl('https://localhost'));
-        $this->assertTrue(NavigationHelper::isAbsoluteUrl('ftp://localhost'));
-        $this->assertTrue(NavigationHelper::isAbsoluteUrl('//localhost'));
-        $this->assertFalse(NavigationHelper::isAbsoluteUrl('products/1'));
-        $this->assertFalse(NavigationHelper::isAbsoluteUrl('/'));
-        $this->assertFalse(NavigationHelper::isAbsoluteUrl(''));
+        $this->assertTrue(NavigationHelper::isAbsoluteUrl('http://localhost'),          'http:// should be absolute');
+        $this->assertTrue(NavigationHelper::isAbsoluteUrl('https://localhost'),         'https:// should be absolute');
+        $this->assertTrue(NavigationHelper::isAbsoluteUrl('ftp://localhost'),           'ftp:// should be absolute');
+        $this->assertTrue(NavigationHelper::isAbsoluteUrl('//localhost'),               '// should be absolute');
+        $this->assertTrue(NavigationHelper::isAbsoluteUrl('javascript:alert("hello")'), 'javascript: should be absolute');
+        $this->assertFalse(NavigationHelper::isAbsoluteUrl('products/1'),               'products/1 should be relative');
+        $this->assertFalse(NavigationHelper::isAbsoluteUrl('/'),                        '/ should be relative');
+        $this->assertFalse(NavigationHelper::isAbsoluteUrl(''),                         'empty url should be relative');
     }
 
 }
